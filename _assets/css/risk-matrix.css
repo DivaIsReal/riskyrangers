@@ -1,0 +1,43 @@
+.risk-matrix-container {
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.risk-matrix-container svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.risk-point {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+}
+
+.risk-point:hover {
+  transform: scale(1);
+}
+
+.risk-code {
+  font-size: 8px;
+  fill: white;
+  pointer-events: none;
+}
+
+.risk-point-info {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.risk-point.active .risk-point-info {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
